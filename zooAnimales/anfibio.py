@@ -13,7 +13,7 @@ class Animal:
 class Anfibio(Animal):
     ranas: int = 0
     salamandras: int = 0
-    listado: List[anfibio] = []
+    listado: List[Anfibio] = []
     
     def _init_(self, nombre: str, edad: int, habitat: str, genero: str, colorPiel: str, venenoso: bool):
         super()._init_(nombre, edad, habitat, genero)
@@ -39,7 +39,7 @@ class Anfibio(Animal):
         return rana
 
     @staticmethod
-    def crearSalamandra(nombre: str, edad: int, genero: str) -> anfibio:
+    def crearSalamandra(nombre: str, edad: int, genero: str) -> Anfibio:
         Anfibio.salamandras += 1
         salamandra = Anfibio(nombre, edad, "selva", genero, "negro y amarillo", False)
         Anfibio.listado.append(salamandra)
