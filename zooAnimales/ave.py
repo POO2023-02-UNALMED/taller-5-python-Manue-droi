@@ -1,5 +1,5 @@
 from typing import List
-
+from zooAnimales import animal
 class Animal:
     def _init_(self, nombre: str, edad: int, habitat: str, genero: str):
         self.nombre = nombre
@@ -9,7 +9,7 @@ class Animal:
 
 class Ave(Animal):
     plural = "Aves"
-    listado: List[Ave] = []
+    listado = []
     halcones = 0
     aguilas = 0
 
@@ -22,29 +22,29 @@ class Ave(Animal):
     def cantidadAves() -> int:
         return len(Ave.listado)
 
-    def movimiento(self) -> str:
+    def movimiento(self):
         return "volar"
 
     @staticmethod
-    def getListado() -> List[Ave]:
+    def getListado():
         return Ave.listado
 
     def getColorPlumas(self) -> str:
         return self.colorPlumas
 
     @staticmethod
-    def setListado(listado: List[Ave]) -> None:
+    def setListado(listado) -> None:
         Ave.listado = listado
 
     def setColorPlumas(self, colorPlumas: str) -> None:
         self.colorPlumas = colorPlumas
 
     @staticmethod
-    def crearHalcon(nombre: str, edad: int, genero: str) -> Ave:
+    def crearHalcon(nombre: str, edad: int, genero: str) :
         Ave.halcones += 1
         return Ave(nombre, edad, "montanas", genero, "cafe glorioso")
 
     @staticmethod
-    def crearAguila(nombre: str, edad: int, genero: str) -> Ave:
+    def crearAguila(nombre: str, edad: int, genero: str):
         Ave.aguilas += 1
         return Ave(nombre, edad, "montanas", genero, "blanco y amarillo")

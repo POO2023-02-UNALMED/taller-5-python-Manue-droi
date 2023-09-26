@@ -1,19 +1,10 @@
-from typing import List
 
-class Animal:
-    def _init_(self, nombre: str, edad: int, habitat: str, genero: str):
-        self.nombre = nombre
-        self.edad = edad
-        self.habitat = habitat
-        self.genero = genero
-
-    def movimiento(self) -> str:
-        pass
+from zooAnimales.animal import Animal
 
 class Pez(Animal):
     salmones: int = 0
     bacalaos: int = 0
-    listado: List[Pez] = []
+    listado = []
     
     def _init_(self, nombre: str, edad: int, habitat: str, genero: str, colorEscamas: str, cantidadAletas: int):
         super()._init_(nombre, edad, habitat, genero)
@@ -32,14 +23,14 @@ class Pez(Animal):
         return "nadar"
     
     @staticmethod
-    def crearSalmon(nombre: str, edad: int, genero: str) -> Pez:
+    def crearSalmon(nombre: str, edad: int, genero: str):
         Pez.salmones += 1
         salmon = Pez(nombre, edad, "oceano", genero, "rojo", 6)
         Pez.listado.append(salmon)
         return salmon
     
     @staticmethod
-    def crearBacalao(nombre: str, edad: int, genero: str) -> Pez:
+    def crearBacalao(nombre: str, edad: int, genero: str):
         Pez.bacalaos += 1
         bacalao = Pez(nombre, edad, "oceano", genero, "gris", 6)
         Pez.listado.append(bacalao)
