@@ -1,7 +1,7 @@
 from typing import List
 
 class Animal:
-    def __init__(self, nombre: str, edad: int, habitat: str, genero: str):
+    def _init_(self, nombre: str, edad: int, habitat: str, genero: str):
         self.nombre = nombre
         self.edad = edad
         self.habitat = habitat
@@ -13,15 +13,15 @@ class Animal:
 class Anfibio(Animal):
     ranas: int = 0
     salamandras: int = 0
-    listado: List[Anfibio] = []
+    listado: List[anfibio] = []
     
-    def __init__(self, nombre: str, edad: int, habitat: str, genero: str, colorPiel: str, venenoso: bool):
-        super().__init__(nombre, edad, habitat, genero)
+    def _init_(self, nombre: str, edad: int, habitat: str, genero: str, colorPiel: str, venenoso: bool):
+        super()._init_(nombre, edad, habitat, genero)
         self.colorPiel = colorPiel
         self.venenoso = venenoso
         Anfibio.listado.append(self)
 
-    def __init__(self):
+    def _init_(self):
         Anfibio.listado.append(self)
 
     @staticmethod
@@ -39,7 +39,7 @@ class Anfibio(Animal):
         return rana
 
     @staticmethod
-    def crearSalamandra(nombre: str, edad: int, genero: str) -> Anfibio:
+    def crearSalamandra(nombre: str, edad: int, genero: str) -> anfibio:
         Anfibio.salamandras += 1
         salamandra = Anfibio(nombre, edad, "selva", genero, "negro y amarillo", False)
         Anfibio.listado.append(salamandra)

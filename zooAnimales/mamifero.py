@@ -3,13 +3,13 @@ class Mamifero(Animal):
     leones = 0
     listado = []
     
-    def __init__(self, nombre, edad, habitat, genero, pelaje, patas):
-        super().__init__(nombre, edad, habitat, genero)
+    def _init_(self, nombre, edad, habitat, genero, pelaje, patas):
+        super()._init_(nombre, edad, habitat, genero)
         self.pelaje = pelaje
         self.patas = patas
         Mamifero.listado.append(self)
     
-    def __init__(self):
+    def _init_(self):
         Mamifero.listado.append(self)
     
     @staticmethod

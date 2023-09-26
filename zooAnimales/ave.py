@@ -1,7 +1,7 @@
 from typing import List
 
 class Animal:
-    def __init__(self, nombre: str, edad: int, habitat: str, genero: str):
+    def _init_(self, nombre: str, edad: int, habitat: str, genero: str):
         self.nombre = nombre
         self.edad = edad
         self.habitat = habitat
@@ -13,8 +13,8 @@ class Ave(Animal):
     halcones = 0
     aguilas = 0
 
-    def __init__(self, nombre: str = None, edad: int = 0, habitat: str = None, genero: str = None, colorPlumas: str = None):
-        super().__init__(nombre, edad, habitat, genero)
+    def _init_(self, nombre: str = None, edad: int = 0, habitat: str = None, genero: str = None, colorPlumas: str = None):
+        super()._init_(nombre, edad, habitat, genero)
         self.colorPlumas = colorPlumas
         Ave.listado.append(self)
 

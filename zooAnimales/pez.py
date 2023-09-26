@@ -1,7 +1,7 @@
 from typing import List
 
 class Animal:
-    def __init__(self, nombre: str, edad: int, habitat: str, genero: str):
+    def _init_(self, nombre: str, edad: int, habitat: str, genero: str):
         self.nombre = nombre
         self.edad = edad
         self.habitat = habitat
@@ -15,13 +15,13 @@ class Pez(Animal):
     bacalaos: int = 0
     listado: List[Pez] = []
     
-    def __init__(self, nombre: str, edad: int, habitat: str, genero: str, colorEscamas: str, cantidadAletas: int):
-        super().__init__(nombre, edad, habitat, genero)
+    def _init_(self, nombre: str, edad: int, habitat: str, genero: str, colorEscamas: str, cantidadAletas: int):
+        super()._init_(nombre, edad, habitat, genero)
         self.colorEscamas = colorEscamas
         self.cantidadAletas = cantidadAletas
         Pez.listado.append(self)
     
-    def __init__(self):
+    def _init_(self):
         Pez.listado.append(self)
     
     @staticmethod
