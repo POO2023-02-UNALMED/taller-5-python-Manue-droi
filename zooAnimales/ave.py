@@ -1,11 +1,6 @@
 from typing import List
-from zooAnimales import animal
-class Animal:
-    def _init_(self, nombre: str, edad: int, habitat: str, genero: str):
-        self.nombre = nombre
-        self.edad = edad
-        self.habitat = habitat
-        self.genero = genero
+from zooAnimales import Animal
+
 
 class Ave(Animal):
     plural = "Aves"
