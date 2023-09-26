@@ -1,5 +1,5 @@
 from typing import List
-from zooAnimales import Animal
+from zooAnimales.animal import Animal
 
 
 class Ave(Animal):
